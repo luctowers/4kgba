@@ -3,6 +3,11 @@
 A collection of small Gameboy Advance demos whose exported ROMs occupy 4096
 bytes or less.
 
+## Download the ROMs
+
+[**minesweeper.gba (3984 bytes)**][minesweeper release]  
+![minesweeper preview](minesweeper/preview.png)
+
 ## Project Specifications
 
 - ROM size no more than 4096 Bytes
@@ -16,11 +21,6 @@ Libadvance is a stripped-down refactored copy of tonclib designed specifically
 for 4KGBA. Features are to be implemented only as needed by 4KGBA projects.
 Macros and BIOS calls only, all other features must be implemented on a
 per-project basis.
-
-## Download the ROMs
-
-[**minesweeper.gba (3984 bytes)**][minesweeper release]  
-![minesweeper preview](minesweeper/preview.png)
 
 ## Attributions
 
