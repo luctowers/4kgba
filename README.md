@@ -17,6 +17,11 @@ for 4KGBA. Features are to be implemented only as needed by 4KGBA projects.
 Macros and BIOS calls only, all other features must be implemented on a
 per-project basis.
 
+## Download the ROMs
+
+[**minesweeper.gba (3984 bytes)**][minesweeper release]  
+![minesweeper preview](minesweeper/preview.png)
+
 ## Attributions
 
 **Tonclib Code**  
@@ -26,3 +31,5 @@ Licensed under MIT
 **4KGBA Code**  
 © 2019 Lucas Towers  
 Licensed under MIT
+
+[minesweeper release]: https://github.com/luctowers/4kgba/releases/download/0.0.1/minesweeper.gba
