@@ -342,7 +342,7 @@ void FloodFillReveal(MapPosition position)
 
 // RETICLE FUNCTIONS
 
-MapPosition reticle_position = { (MAP_WIDTH-1)/2, (MAP_HEIGHT-1)/2};
+MapPosition reticle_position = { (MAP_WIDTH-1)/2, (MAP_HEIGHT-1)/2 };
 u32 reticle_move_repeat_delay = 8;
 
 void PlaceReticle()
@@ -392,31 +392,27 @@ void MoveReticle()
 
 // PLAYER ACTIONS
 
-bool Investigate(MapPosition position)
+void Investigate(MapPosition position)
 {
   ScreenEntry* cover_entry = MapEntryPtr(COVER_SBB, position);
   ScreenEntry* mine_entry = MapEntryPtr(MINE_SBB, position);
 
   if (*cover_entry == BLANK_TILE_ID)
-    return false;
+    return;
 
-  bool mine_found = false;
+  if ((*cover_entry & ENTRY_ID_MASK) == FLAG_TILE_ID)
+    return;
+
   u32 mines_nearby;
 
-  switch (*mine_entry)
-  {
-    case MINE_TILE_ID:
-      Boom();
-      mine_found = true;
-      break;
-    default:
-      mines_nearby = *mine_entry-NO_MINE_TILE_ID;
-      Bleep(mines_nearby > 3 ? 3 : mines_nearby);
+  if (*mine_entry == MINE_TILE_ID)
+    Boom();
+  else {
+    mines_nearby = *mine_entry-NO_MINE_TILE_ID;
+    Bleep(mines_nearby > 3 ? 3 : mines_nearby);
   }
 
   FloodFillReveal(position);
-
-  return mine_found;
 }
 
 void ToggleFlag(MapPosition position)
