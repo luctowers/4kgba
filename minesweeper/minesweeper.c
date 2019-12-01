@@ -381,7 +381,7 @@ void randomizeMines(MapPosition reticle_position)
   for (u32 i = 0; i < MINE_COUNT; i++)
   {
     MapPosition mine_pos;
-    bool plant_succesful = false;
+    u32 plant_succesful = 0;
     do
     {
       mine_pos = randomMapPosition();
