@@ -11,7 +11,7 @@ bytes or less.
 ## Project Specifications
 
 - ROM size no more than 4096 Bytes
-- Implementation in a single readable C-file 500 lines or less
+- Implementation in a single readable C-file
 - Short Makefile using DevKitPro to compile, link and patch
 - No dependencies apart from macros and BIOS calls in libadvance
 
