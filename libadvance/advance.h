@@ -1,5 +1,4 @@
 #include <stdint.h>
-#include <stdbool.h>
 
 // TYPES
 
@@ -44,6 +43,11 @@ typedef volatile struct
   volatile void* destination;
   vu32 control;
 } DmaChannel;
+
+// BOOLEAN LITERALS
+
+#define false 0
+#define true  1
 
 // MEMORY MAP
 
