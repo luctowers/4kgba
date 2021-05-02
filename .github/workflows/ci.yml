@@ -1,9 +1,9 @@
 name: CI
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -12,18 +12,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master
       - name: Build libadvance
-        working-directory: ${{runner.workspace}}/libadvance
-        run: make
+        run: make -C libadvance
       - name: Build minesweeper
-        working-directory: ${{runner.workspace}}/minesweeper
-        run: make
-      - uses: actions/upload-artifact@v2
+        run: make -C minesweeper
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v2
         with:
           name: roms
           path: ${{runner.workspace}}/*/*.gba
-      - uses: softprops/action-gh-release@v1
+      - name: Release
+        uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
-          files: ${{runner.workspace}}/minesweeper/minesweeper.gba
+          files: minesweeper/minesweeper.gba
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
