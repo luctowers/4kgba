@@ -1,0 +1,21 @@
+name: CI
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: devkitpro/devkitarm
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+      - name: Build libadvance
+        run: make -C ./libadvance
+      - name: Build minesweeper
+        run: make -C ./minesweeper
+      - uses: actions/upload-artifact@v2
+        with:
+          name: minesweeper-rom
+          path: ./minesweeper/minesweeper.gba
