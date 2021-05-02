@@ -12,18 +12,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master
       - name: Build libadvance
-        run: make -C libadvance
+        run: make -C ./libadvance
       - name: Build minesweeper
-        run: make -C minesweeper
+        run: make -C ./minesweeper
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
         with:
           name: roms
-          path: ${{runner.workspace}}/*/*.gba
+          path: ./*/*.gba
       - name: Release
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
-          files: minesweeper/minesweeper.gba
+          files: ./minesweeper/minesweeper.gba
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
