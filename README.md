@@ -32,4 +32,4 @@ Licensed under MIT
 © 2019 Lucas Towers  
 Licensed under MIT
 
-[minesweeper release]: https://github.com/luctowers/4kgba/releases/download/v1.0/minesweeper.gba
+[minesweeper release]: https://github.com/luctowers/4kgba/releases/download/v1.0.0/minesweeper.gba
