@@ -1,4 +1,4 @@
-name: devkitpro/devkitarm
+name: devkitarm
 on:
   push:
     branches: [master]
