@@ -1,11 +1,11 @@
-name: CI (ubuntu-latest devkitpro/devkitarm)
+name: devkitpro/devkitarm
 on:
   push:
     branches: [master]
   pull_request:
     branches: [master]
 jobs:
-  CI:
+  ci:
     runs-on: ubuntu-latest
     container: devkitpro/devkitarm
     steps:
