@@ -5,7 +5,7 @@ bytes or less.
 
 ## Download the ROMs
 
-[**minesweeper.gba (3984 bytes)**][minesweeper release]  
+[**minesweeper.gba**][minesweeper release]  
 ![minesweeper preview](minesweeper/preview.png)
 
 ## Project Specifications
@@ -32,4 +32,4 @@ Licensed under MIT
 © 2019 Lucas Towers  
 Licensed under MIT
 
-[minesweeper release]: https://github.com/luctowers/4kgba/releases/download/0.0.1/minesweeper.gba
+[minesweeper release]: https://github.com/luctowers/4kgba/releases/download/v1.0/minesweeper.gba
