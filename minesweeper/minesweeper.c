@@ -174,7 +174,7 @@ const Palbank BG_COLORS[3] =
 const Palbank OBJ_COLORS = { RGB8(0,0,0),RGB8(255, 238, 88),RGB8(0,0,0) };
 
 
-/* FUNCTION IMLEMENTATIONS */
+/* FUNCTION IMPLEMENTATIONS */
 
 void main()
 {
