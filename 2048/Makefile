@@ -1,7 +1,7 @@
 SHELL     := /bin/bash
 PATH      := $(DEVKITARM)/bin:$(DEVKITPRO)/tools/bin:$(PATH)
 
-PROJ      := minesweeper
+PROJ      := 2048
 ELF       := $(PROJ).elf
 ROM       := $(PROJ).gba
 COBJS     := $(PROJ).o
